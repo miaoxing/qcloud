@@ -2,8 +2,6 @@
 
 namespace Miaoxing\Tencentyun\Service;
 
-use Miaoxing\File\Service\File;
-use Miaoxing\Tencentyun\Service\TencentyunCos;
 use Tencentyun\Auth;
 use Tencentyun\ImageV2;
 

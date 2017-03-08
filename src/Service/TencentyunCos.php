@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Tencentyun\Service;
 
-use Miaoxing\Tencentyun\Service\Tencentyun;
 use Qcloud_cos\Cosapi;
 
 /**
@@ -57,6 +56,7 @@ class TencentyunCos extends Tencentyun
         if ($ret['code'] === 0) {
             $ret['url'] = $ret['data']['access_url'];
         }
+
         return $ret;
     }
 }
