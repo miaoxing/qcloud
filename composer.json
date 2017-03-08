@@ -1,0 +1,23 @@
+{
+  "name": "miaoxing/tencentyun",
+  "description": "Miaoxing Tencentyun Plugin",
+  "keywords": [
+    "miaoxing", "tencentyun"
+  ],
+  "license": "MIT",
+  "require": {
+    "miaoxing/app": "dev-master@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\Tencentyun\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Tencentyun\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
