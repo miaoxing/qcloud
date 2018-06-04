@@ -4,6 +4,7 @@ namespace Miaoxing\Tencentyun\Service;
 
 use Qcloud\Cos\Client;
 use Qcloud\Cos\Exception\ServiceResponseException;
+use Qcloud\Cos\Signature;
 
 /**
  * 腾讯云对象存储服务V5
@@ -41,6 +42,20 @@ class TencentyunCosV5 extends Tencentyun
      * @var Client
      */
     protected $client;
+
+    public function signUrl($url, $seconds = '+10 minutes')
+    {
+        //http://p-1251323154.cossh.myqcloud.com/upload/card_intro_big29bc6c.jpg?sign=d83QchPj3DEIV3Odea0oqwY7h7thPTEyNTEzMjMxNTQmaz1BS0lEeXJZNE5VdTh6Zkx3TFllUDNVa29qU3lLVTNSZExaRWgmZT0xNTMwNjkyMTM3JnQ9MTUyODEwMDEzNyZyPTUxMTcyNTM1MSZmPS91cGxvYWQvY2FyZF9pbnRyb19iaWcyOWJjNmMuanBnJmI9cA==
+//        $a = new signature($this->secretId, $this->secretKey);
+//        $a->signRequest()
+
+        //$url = 'http://p.vchang8.com/upload/card_intro_big29bc6c.jpg';
+//        $url = $url;
+        $url =  $this->getClient()->getObjectUrl($this->bucket, $url, $seconds);
+        //$url = $this->domain . parse_url($url, PHP_URL_PATH) . '?' . parse_url($url, PHP_URL_QUERY);
+
+        return $url;
+    }
 
     public function getClient()
     {
