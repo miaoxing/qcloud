@@ -37,7 +37,7 @@ class TencentyunCos extends Tencentyun
     /**
      * {@inheritdoc}
      */
-    public function write($file, $ext, $customName)
+    public function write($file, $ext = '', $customName = '')
     {
         return $this->processWrite($file, $ext, $customName);
     }
