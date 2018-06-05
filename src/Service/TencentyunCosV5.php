@@ -43,11 +43,31 @@ class TencentyunCosV5 extends Tencentyun
      */
     protected $client;
 
-    public function signUrl($url, $seconds = '+10 minutes')
+    public function signUrl($url, $seconds = 60)
     {
-        $url =  $this->getClient()->getObjectUrl($this->bucket, $url, $seconds);
+        // 默认域名直接使用
+        //$url =  $this->getClient()->getObjectUrl($this->bucket, $url, $seconds);
 
-        return $url;
+        $sign = $this->generateSign($seconds);
+
+        return $url . '?sign=' . $sign;
+    }
+
+    protected function generateSign($seconds)
+    {
+        $appId = $this->appId;
+        $bucket = $this->bucket;
+        $secretId = $this->secretId;
+        $secretKey = $this->secretKey;
+        $expired = time() + $seconds;
+        $current = time();
+        $rdm = rand();
+
+        $sign = 'a=' . $appId . '&b=' . $bucket . '&k=' . $secretId
+            . '&e=' . $expired . '&t=' . $current . '&r=' . $rdm . '&f=';
+        $sign = base64_encode(hash_hmac('SHA1', $sign, $secretKey, true) . $sign);
+
+        return $sign;
     }
 
     public function getClient()
