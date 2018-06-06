@@ -2,9 +2,10 @@
 
 namespace Miaoxing\Tencentyun\Service;
 
+use Exception;
+use Guzzle\Common\Exception\GuzzleException;
 use Qcloud\Cos\Client;
 use Qcloud\Cos\Exception\ServiceResponseException;
-use Qcloud\Cos\Signature;
 
 /**
  * 腾讯云对象存储服务V5
@@ -120,6 +121,8 @@ class TencentyunCosV5 extends Tencentyun
             }
         } catch (ServiceResponseException $e) {
             return $this->err($e->getMessage(), $e->getStatusCode());
+        } catch (GuzzleException $e) {
+            return $this->err($e->getMessage(), $e->getCode());
         }
     }
 }
