@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Tencentyun\Service;
 
-use Exception;
 use Guzzle\Common\Exception\GuzzleException;
 use Qcloud\Cos\Client;
 use Qcloud\Cos\Exception\ServiceResponseException;
@@ -103,11 +102,11 @@ class TencentyunCosV5 extends Tencentyun
 
         try {
             /** @var \Guzzle\Service\Resource\Model $result */
-            $result = $this->getClient()->putObject(array(
+            $result = $this->getClient()->putObject([
                 'Bucket' => $this->bucket,
                 'Key' => $customName,
                 'Body' => fopen($file, 'rb'),
-            ));
+            ]);
             if ($result->get('ObjectURL')) {
                 return [
                     'code' => 0, // 兼容已有的接口
