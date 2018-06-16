@@ -43,14 +43,21 @@ class TencentyunCosV5 extends Tencentyun
      */
     protected $client;
 
+    public function __construct(array $options = [])
+    {
+        parent::__construct($options);
+
+        // TODO 被 File::setAppId 覆盖了
+        $this->appId = $options['appId'];
+    }
+
     public function signUrl($url, $seconds = 60)
     {
-        // 默认域名直接使用
-        //$url =  $this->getClient()->getObjectUrl($this->bucket, $url, $seconds);
+        if ($this->domain) {
+            return $url . '?sign=' . $this->generateSign($seconds);
+        }
 
-        $sign = $this->generateSign($seconds);
-
-        return $url . '?sign=' . $sign;
+        return $this->getClient()->getObjectUrl($this->bucket, $url, $seconds);
     }
 
     protected function generateSign($seconds)
@@ -59,8 +66,8 @@ class TencentyunCosV5 extends Tencentyun
         $bucket = $this->bucket;
         $secretId = $this->secretId;
         $secretKey = $this->secretKey;
-        $expired = time() + $seconds;
         $current = time();
+        $expired = $current + $seconds;
         $rdm = rand();
 
         $sign = 'a=' . $appId . '&b=' . $bucket . '&k=' . $secretId
