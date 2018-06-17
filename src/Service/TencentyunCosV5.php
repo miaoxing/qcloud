@@ -53,6 +53,10 @@ class TencentyunCosV5 extends Tencentyun
 
     public function signUrl($url, $seconds = 60)
     {
+        if (!$url) {
+            return $url;
+        }
+
         if ($this->domain) {
             return $url . '?sign=' . $this->generateSign($seconds);
         }
