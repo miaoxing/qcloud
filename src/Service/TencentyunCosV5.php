@@ -119,14 +119,9 @@ class TencentyunCosV5 extends Tencentyun
                 'Body' => fopen($file, 'rb'),
             ]);
             if ($result->get('ObjectURL')) {
-                $url = $this->domain . '/' . $customName;
-                if ($this->sign) {
-                    $url = $this->signUrl($url);
-                }
-
                 return [
                     'code' => 0, // 兼容已有的接口 TODO 更改为ret
-                    'url' => $url,
+                    'url' => $this->domain . '/' . $customName,
                 ];
             } else {
                 return $this->err([

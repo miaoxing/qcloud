@@ -160,7 +160,7 @@ class Tencentyun extends \Miaoxing\File\Service\File
 
         // 6. 对图片增加签名
         if ($this->sign) {
-            $ret['url'] = $this->signUrl($ret['url'], $this->sign);
+            $ret['url'] = $this->signUrl($ret['url']);
         }
 
         return [
