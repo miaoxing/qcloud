@@ -101,7 +101,11 @@ class TencentyunCosV5 extends Tencentyun
      */
     public function write($file, $ext = '', $customName = '')
     {
-        return $this->processWrite($file, $ext, $customName);
+        if ($this->isVoiceExt($this->getExt($file, $ext))) {
+            return $this->processWriteForVoice($file, $ext, $customName);
+        } else {
+            return $this->processWrite($file, $ext, $customName);
+        }
     }
 
     /**
