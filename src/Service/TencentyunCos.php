@@ -18,19 +18,19 @@ class TencentyunCos extends Tencentyun
      * 重要: appId,secretId,secretKey此处修改无效,需到Tencentyun\Conf中更改
      *
      * @var int
-     * @see Qcloud_cos\Conf::APPID
+     * @see \Qcloud_cos\Conf::APPID
      */
     protected $appId;
 
     /**
      * @var string
-     * @see Qcloud_cos\Conf::SECRET_ID
+     * @see \Qcloud_cos\Conf::SECRET_ID
      */
     protected $secretId;
 
     /**
      * @var string
-     * @see Qcloud_cos\Conf::SECRET_KEY
+     * @see \Qcloud_cos\Conf::SECRET_KEY
      */
     protected $secretKey;
 
