@@ -113,7 +113,7 @@ class TencentyunCosV5 extends Tencentyun
      */
     protected function callUploadApi($file, $customName)
     {
-        !$customName && $customName = $file;
+        !$customName && $customName = $this->getFileUrl($file);
 
         try {
             /** @var \Guzzle\Service\Resource\Model $result */

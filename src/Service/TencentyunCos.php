@@ -47,7 +47,7 @@ class TencentyunCos extends Tencentyun
      */
     protected function callUploadApi($file, $customName)
     {
-        !$customName && $customName = $file;
+        !$customName && $customName = $this->getFileUrl($file);
 
         // NOTICE: 不以/开头,会返回错误"bucket与签名中的bucket不匹配"
         $dstPath = '/' . $customName;

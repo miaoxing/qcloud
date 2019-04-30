@@ -184,7 +184,7 @@ class Tencentyun extends \Miaoxing\File\Service\File
      */
     protected function callUploadApi($file, $customName)
     {
-        !$customName && $customName = $file;
+        !$customName && $customName = $this->getFileUrl($file);
         $ret = ImageV2::upload($file, $this->bucket, $customName);
         if ($ret['code'] === 0) {
             $ret += [
