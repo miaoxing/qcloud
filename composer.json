@@ -1,23 +1,35 @@
 {
-  "name": "miaoxing/tencentyun",
-  "description": "Miaoxing Tencentyun Plugin",
+  "name": "miaoxing/qcloud",
+  "description": "Miaoxing Tencent Cloud Plugin",
   "keywords": [
-    "miaoxing", "tencentyun"
+    "miaoxing", "qcloud"
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "dev-master@dev"
+    "miaoxing/app": "^0.5.1"
   },
   "autoload": {
     "psr-4": {
-      "Miaoxing\\Tencentyun\\": "src"
+      "Miaoxing\\Qcloud\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "MiaoxingTest\\Tencentyun\\": "tests"
+      "MiaoxingTest\\Qcloud\\": "tests"
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "require-ci": {
+      "miaoxing/dev": "miaoxing/dev as 8.x-dev",
+      "miaoxing/phpstan-miaoxing": "miaoxing/phpstan-miaoxing as 0.1.x-dev",
+      "miaoxing/plugin": "miaoxing/plugin as 0.7.x-dev",
+      "miaoxing/services": "miaoxing/services as 0.4.x-dev",
+      "wei/wei": "twinh/wei as 0.12.x-dev"
+    }
+  },
+  "require-dev": {
+    "miaoxing/dev": "^8.1.0"
+  }
 }
