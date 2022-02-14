@@ -1,6 +1,6 @@
 <?php
 
-namespace Miaoxing\Tencentyun\Service;
+namespace Miaoxing\Qcloud\Service;
 
 use Tencentyun\Auth;
 use Tencentyun\ImageV2;

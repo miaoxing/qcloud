@@ -1,6 +1,6 @@
 <?php
 
-namespace Miaoxing\Tencentyun\Service;
+namespace Miaoxing\Qcloud\Service;
 
 use Guzzle\Common\Exception\GuzzleException;
 use Qcloud\Cos\Client;
