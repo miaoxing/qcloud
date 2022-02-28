@@ -2,11 +2,12 @@
   "name": "miaoxing/qcloud",
   "description": "Miaoxing Tencent Cloud Plugin",
   "keywords": [
-    "miaoxing", "qcloud"
+    "miaoxing",
+    "qcloud"
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "^0.5.1",
+    "miaoxing/app": "^0.6.0",
     "qcloud/cos-sdk-v5": "^2.5"
   },
   "autoload": {
