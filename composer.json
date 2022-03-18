@@ -1,5 +1,6 @@
 {
   "name": "miaoxing/qcloud",
+  "type": "miaoxing-plugin",
   "description": "Miaoxing Tencent Cloud Plugin",
   "keywords": [
     "miaoxing",
