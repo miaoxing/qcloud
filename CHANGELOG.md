@@ -1,3 +1,18 @@
+## [0.1.2](https://github.com/miaoxing/qcloud/compare/v0.1.1...v0.1.2) (2022-03-31)
+
+
+### Bug Fixes
+
+* **qcloud:** 增加包类型为 `miaoxing-plugin` ([439d875](https://github.com/miaoxing/qcloud/commit/439d8754fe09d99cf0e234550037e90618dd0e2a))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.6.1` to `0.6.2`
+
 ## [0.1.1](https://github.com/miaoxing/qcloud/compare/v0.1.0...v0.1.1) (2022-03-04)
 
 
