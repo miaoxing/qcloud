@@ -1,3 +1,14 @@
+## [0.1.4](https://github.com/miaoxing/qcloud/compare/v0.1.3...v0.1.4) (2022-06-01)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.1.0` to `8.1.1`
+* **@miaoxing/app:** upgrade from `0.6.3` to `0.6.4`
+
 ## [0.1.3](https://github.com/miaoxing/qcloud/compare/v0.1.2...v0.1.3) (2022-04-30)
 
 
