@@ -1,3 +1,18 @@
+## [0.1.6](https://github.com/miaoxing/qcloud/compare/v0.1.5...v0.1.6) (2022-07-02)
+
+
+### Bug Fixes
+
+* 解决 composer 2.2+ 默认不启用插件导致安装路径错误 ([c5c9a4b](https://github.com/miaoxing/qcloud/commit/c5c9a4bcae510927c68bbcd99b49b1ee199021cd))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.6.5` to `0.6.6`
+
 ## [0.1.5](https://github.com/miaoxing/qcloud/compare/v0.1.4...v0.1.5) (2022-07-01)
 
 
