@@ -8,7 +8,7 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "^0.6.13",
+    "miaoxing/app": "^0.7.0",
     "qcloud/cos-sdk-v5": "^2.5"
   },
   "autoload": {
