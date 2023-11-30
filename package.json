@@ -1,12 +1,12 @@
 {
   "name": "@miaoxing/qcloud",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "private": true,
   "main": "index.js",
   "repository": "https://github.com/miaoxing/qcloud",
   "license": "MIT",
   "devDependencies": {
-    "@miaoxing/dev": "^8.2.3"
+    "@miaoxing/dev": "^8.2.4"
   },
   "jest": {
     "preset": "jest-preset-miaoxing"
