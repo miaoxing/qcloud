@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Qcloud\Service;
 
-use Exception;
 use Miaoxing\Plugin\Service\BaseStorage;
 use Qcloud\Cos\Client;
 use Qcloud\Cos\Exception\ServiceResponseException;
@@ -60,7 +59,7 @@ class Cos extends BaseStorage
                 'code' => $e->getStatusCode(),
                 'cosErrorCode' => $e->getCosErrorCode(),
             ]);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return err($e->getMessage());
         }
     }
