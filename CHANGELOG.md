@@ -1,3 +1,19 @@
+## [0.1.35](https://github.com/miaoxing/qcloud/compare/v0.1.34...v0.1.35) (2024-09-01)
+
+
+### Features
+
+* 插件增加 wei 命令行入口 ([9540412](https://github.com/miaoxing/qcloud/commit/954041205415e263a15254b098000b94e962f595))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `9.1.3` to `9.2.0`
+* **@miaoxing/app:** upgrade from `0.10.3` to `0.10.4`
+
 ## [0.1.34](https://github.com/miaoxing/qcloud/compare/v0.1.33...v0.1.34) (2024-08-03)
 
 
