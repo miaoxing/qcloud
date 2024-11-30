@@ -8,7 +8,7 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "^0.10.6",
+    "miaoxing/app": "^0.10.7",
     "qcloud/cos-sdk-v5": "^2.5"
   },
   "autoload": {
@@ -35,7 +35,7 @@
       "miaoxing/phpstan-miaoxing": "miaoxing/phpstan-miaoxing as 3.x-dev",
       "miaoxing/plugin": "miaoxing/plugin as 0.17.x-dev",
       "miaoxing/services": "miaoxing/services as 0.9.x-dev",
-      "wei/wei": "twinh/wei as 0.17.x-dev"
+      "wei/wei": "twinh/wei as 0.18.x-dev"
     }
   },
   "require-dev": {
